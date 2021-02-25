@@ -1,12 +1,29 @@
 import React from "react"
+import TodosList from "./TodosList"
 
 class TodoContainer extends React.Component{
+
+    state={
+        todo:[
+            {
+                id:1,
+                title: "Requirement Data Collection",
+                completed: "true"
+            },
+            {
+                id:2,
+                title: "Setup Development Activity",
+                completed: "false"
+            }
+        ]
+    }
     render(){
         return(
+                     
             <div>
-                <h1>Hello from TodoContainer</h1>
-                <p> this is from keerthana</p>
+                <TodosList todo={this.state.todo}/>
             </div>
+           
         )
     }
 }
